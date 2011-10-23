@@ -65,3 +65,5 @@ nnoremap <leader><space> :noh<cr>
 " NERDTree configuration
 let NERDTreeIgnore=['\.out$', '\.pyc$', '\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
+
+let NERDSpaceDelims=1
