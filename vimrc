@@ -61,3 +61,7 @@ nnoremap <S-Tab> :bprevious<cr>
 
 " Clear search
 nnoremap <leader><space> :noh<cr>
+
+" NERDTree configuration
+let NERDTreeIgnore=['\.out$', '\.pyc$', '\.rbc$', '\~$']
+map <Leader>n :NERDTreeToggle<CR>
