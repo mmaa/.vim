@@ -1,5 +1,6 @@
 call pathogen#runtime_append_all_bundles()
 
+set autoread
 set nobackup
 set nowritebackup
 set noswapfile
