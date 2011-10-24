@@ -65,7 +65,8 @@ nnoremap <S-Tab> :bprevious<cr>
 nnoremap <leader><space> :noh<cr>
 
 " NERDTree configuration
-let NERDTreeIgnore=['\.out$', '\.pyc$', '\.rbc$', '\~$']
+let NERDTreeIgnore=['\.lock$', '\.out$', '\.pyc$', '\.rbc$', '\~$']
+let NERDTreeDirArrows=1
 map <Leader>n :NERDTreeToggle<CR>
 
 let NERDSpaceDelims=1
