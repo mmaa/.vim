@@ -28,6 +28,10 @@ set smartcase   " ... unless they contain at least one capital letter
 set laststatus=2  " always show the status bar
 set statusline=%n:\ %<%f\ %m\ %=%l/%L\ %P
 
+" Enable syntastic syntax checking
+let g:syntastic_enable_signs=1
+let g:syntastic_quiet_warnings=1
+
 filetype plugin indent on " Turn on filetype plugins (:help filetype-plugin)
 
 " In Makefiles, use real tabs, not tabs expanded to spaces
