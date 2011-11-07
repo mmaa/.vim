@@ -76,3 +76,18 @@ let NERDTreeDirArrows=1
 map <Leader>n :NERDTreeToggle<CR>
 
 let NERDSpaceDelims=1
+
+" Trim trailing whitespace on command
+command! TW :call <SID>StripTrailingWhitespaces()<CR>
+
+function! <SID>StripTrailingWhitespaces()
+  " Save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
+  %s/\s\+$//e
+  " Restore previous search history, and cursor position.
+  let @/=_s
+  call cursor(l, c)
+endfunction
