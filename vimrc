@@ -25,6 +25,8 @@ set incsearch   " incremental searching
 set ignorecase  " searches are case insensitive...
 set smartcase   " ... unless they contain at least one capital letter
 
+set tags=./tags
+
 set laststatus=2  " always show the status bar
 set statusline=%n:\ %<%f\ %m\ %=%l/%L\ %P
 
@@ -71,7 +73,7 @@ nnoremap <S-Tab> :bprevious<cr>
 nnoremap <leader><space> :noh<cr>
 
 " NERDTree configuration
-let NERDTreeIgnore=['\.lock$', '\.out$', '\.pyc$', '\.rbc$', '\~$']
+let NERDTreeIgnore=['^tags$', '\.lock$', '\.out$', '\.pyc$', '\.rbc$', '\~$']
 let NERDTreeDirArrows=1
 map <Leader>n :NERDTreeToggle<CR>
 
