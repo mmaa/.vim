@@ -1,5 +1,4 @@
-set guifont=Monaco:h10
-set noantialias
+set guifont=Menlo:h15
 colorscheme solarized
 set background=dark
 
