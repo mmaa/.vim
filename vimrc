@@ -5,6 +5,7 @@ set autoread
 set nobackup
 set nowritebackup
 set noswapfile
+set hidden
 
 set nocompatible      " Use vim, no vi defaults
 set number            " Show line numbers
@@ -30,10 +31,6 @@ set tags=./tags
 set laststatus=2  " always show the status bar
 set statusline=%n:\ %<%f\ %m\ %=%l/%L\ %P
 
-" Enable syntastic syntax checking
-let g:syntastic_enable_signs=1
-let g:syntastic_quiet_warnings=1
-
 filetype plugin indent on " Turn on filetype plugins (:help filetype-plugin)
 
 " In Makefiles, use real tabs, not tabs expanded to spaces
@@ -48,6 +45,9 @@ au BufNewFile,BufRead *.json set ft=javascript
 au BufNewFile,BufRead *.pig set filetype=pig syntax=pig
 
 let mapleader = ","
+
+nmap <silent> <C-n> :cn<cr>
+nmap <silent> <C-p> :cp<cr>
 
 " Opens the directory browser for the directory of the current path.
 map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>

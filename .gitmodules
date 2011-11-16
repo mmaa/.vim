@@ -40,9 +40,6 @@
 [submodule "bundle/slim"]
 	path = bundle/slim
 	url = git://github.com/bbommarito/vim-slim.git
-[submodule "bundle/syntastic"]
-	path = bundle/syntastic
-	url = git://github.com/scrooloose/syntastic.git
 [submodule "bundle/ruby"]
 	path = bundle/ruby
 	url = git://github.com/vim-ruby/vim-ruby.git
