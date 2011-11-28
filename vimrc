@@ -28,6 +28,9 @@ set smartcase   " ... unless they contain at least one capital letter
 
 set tags=./tags
 
+set mouse=a
+
+set wildmenu
 set laststatus=2  " always show the status bar
 set statusline=%n:\ %<%f\ %m\ %=%l/%L\ %P
 
