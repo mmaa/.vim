@@ -21,6 +21,8 @@ set list listchars=tab:\ \ ,trail:·   " a tab should display as "  ", trailing 
 set backspace=indent,eol,start        " backspace through everything in insert mode
 let macvim_hig_shift_movement = 1     " mvim shift-arrow-keys (required in vimrc)
 
+set cpoptions+=$
+
 set hlsearch    " highlight matches (TODO: Map something convenient to nohlsearch)
 set incsearch   " incremental searching
 set ignorecase  " searches are case insensitive...
@@ -86,13 +88,11 @@ let NERDSpaceDelims=1
 command! TW :call <SID>StripTrailingWhitespaces()<CR>
 
 function! <SID>StripTrailingWhitespaces()
-  " Save last search, and cursor position.
-  let _s=@/
+  " Save cursor position.
   let l = line(".")
   let c = col(".")
   " Do the business:
   %s/\s\+$//e
-  " Restore previous search history, and cursor position.
-  let @/=_s
+  " Restore cursor position.
   call cursor(l, c)
 endfunction
