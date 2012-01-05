@@ -13,10 +13,14 @@ set ruler             " Show line and column number
 syntax enable         " Turn on syntax highlighting allowing local overrides
 set encoding=utf-8    " Set default encoding to UTF-8
 
-set wrap
+set t_Co=256
+set background=dark
+colorscheme solarized
+
+set nowrap
 set tabstop=2                         " a tab is two spaces
 set shiftwidth=2                      " an autoindent (with <<) is two spaces
-set expandtab	                        " use spaces, not tabs
+set expandtab                         " use spaces, not tabs
 set list listchars=tab:\ \ ,trail:·   " a tab should display as "  ", trailing whitespace as "·"
 set backspace=indent,eol,start        " backspace through everything in insert mode
 let macvim_hig_shift_movement = 1     " mvim shift-arrow-keys (required in vimrc)
@@ -27,6 +31,8 @@ set hlsearch    " highlight matches (TODO: Map something convenient to nohlsearc
 set incsearch   " incremental searching
 set ignorecase  " searches are case insensitive...
 set smartcase   " ... unless they contain at least one capital letter
+
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/bin/*
 
 set tags=./tags
 

@@ -6,8 +6,6 @@ set guioptions-=T
 set guioptions-=r
 set guioptions-=L
 
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
-
 if has("gui_macvim")
   macmenu &File.New\ Tab key=<nop>
   map <D-t> <Plug>PeepOpen
