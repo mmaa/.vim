@@ -57,6 +57,9 @@ let mapleader = ","
 
 let g:ctrlp_map = '<Leader>t'
 
+nmap <C-j> <C-e>
+nmap <C-k> <C-y>
+
 nmap <silent> <C-n> :cn<cr>
 nmap <silent> <C-p> :cp<cr>
 
