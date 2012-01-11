@@ -17,7 +17,6 @@ set t_Co=256
 set background=dark
 colorscheme solarized
 
-set clipboard=unnamed
 set nowrap
 set tabstop=2                         " a tab is two spaces
 set shiftwidth=2                      " an autoindent (with <<) is two spaces
@@ -36,8 +35,6 @@ set smartcase   " ... unless they contain at least one capital letter
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/bin/*
 
 set tags=./tags
-
-set mouse=a
 
 set wildmenu
 set laststatus=2  " always show the status bar
