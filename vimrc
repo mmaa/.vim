@@ -25,7 +25,7 @@ set list listchars=tab:\ \ ,trail:·   " a tab should display as "  ", trailing 
 set backspace=indent,eol,start        " backspace through everything in insert mode
 let macvim_hig_shift_movement = 1     " mvim shift-arrow-keys (required in vimrc)
 
-set cpoptions+=$
+" set cpoptions+=$
 
 set hlsearch    " highlight matches (TODO: Map something convenient to nohlsearch)
 set incsearch   " incremental searching
