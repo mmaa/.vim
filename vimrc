@@ -18,10 +18,11 @@ set background=dark
 colorscheme solarized
 
 set nowrap
-set tabstop=2                         " a tab is two spaces
+set tabstop=4                         " a hard tab is four spaces
+set softtabstop=2                     " a soft tab is two spaces
 set shiftwidth=2                      " an autoindent (with <<) is two spaces
 set expandtab                         " use spaces, not tabs
-set list listchars=tab:\ \ ,trail:·   " a tab should display as "  ", trailing whitespace as "·"
+set list listchars=tab:▶\ ,trail:·    " a tab should display as "  ", trailing whitespace as "·"
 set backspace=indent,eol,start        " backspace through everything in insert mode
 let macvim_hig_shift_movement = 1     " mvim shift-arrow-keys (required in vimrc)
 
@@ -29,6 +30,8 @@ set nohlsearch  " don't highlight matches
 set incsearch   " incremental searching
 set ignorecase  " searches are case insensitive...
 set smartcase   " ... unless they contain at least one capital letter
+
+set completeopt=menu,preview,longest
 
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/bin/*
 
