@@ -32,6 +32,8 @@ set incsearch   " incremental searching
 set ignorecase  " searches are case insensitive...
 set smartcase   " ... unless they contain at least one capital letter
 
+autocmd BufWritePost .vimrc source $MYVIMRC
+
 set completeopt=menu,preview,longest
 
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/bin/*
