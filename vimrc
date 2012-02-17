@@ -59,6 +59,8 @@ au BufNewFile,BufRead *.pig set filetype=pig syntax=pig
 
 let mapleader = ","
 
+map <Leader>t :CtrlP<CR>
+
 nmap <C-j> <C-e>
 nmap <C-k> <C-y>
 
@@ -96,14 +98,7 @@ map <Leader>n :NERDTreeToggle<CR>
 let NERDSpaceDelims=1
 
 " Trim trailing whitespace on command
-command! TW :call <SID>StripTrailingWhitespaces()<CR>
+command! TW %s/\s\+$//g
 
-function! <SID>StripTrailingWhitespaces()
-  " Save cursor position.
-  let l = line(".")
-  let c = col(".")
-  " Do the business:
-  %s/\s\+$//e
-  " Restore cursor position.
-  call cursor(l, c)
-endfunction
+" Convert Ruby hash syntax
+command! RH %s/([^\w^:]):([\w\d_]+)\s*=>/\1\2:/g
