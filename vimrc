@@ -59,7 +59,7 @@ au BufNewFile,BufRead *.pig set filetype=pig syntax=pig
 
 let mapleader = ","
 
-map <Leader>t :CtrlP<CR>
+let g:ctrlp_map = '<Leader>t'
 
 nmap <C-j> <C-e>
 nmap <C-k> <C-y>
