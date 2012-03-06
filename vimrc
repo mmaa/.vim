@@ -73,6 +73,9 @@ map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 " Map the arrow keys to be based on display lines, not physical lines
 map <Down> gj
 map <Up> gk
+nnoremap j gj
+nnoremap k gk
+
 
 " Map <Leader><Leader> to ZoomWin
 map <Leader><Leader> :ZoomWin<CR>
