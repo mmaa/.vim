@@ -43,3 +43,6 @@
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
+[submodule "bundle/tomorrow"]
+	path = bundle/tomorrow
+	url = git://github.com/chriskempson/vim-tomorrow-theme.git
