@@ -46,6 +46,3 @@
 [submodule "bundle/tomorrow"]
 	path = bundle/tomorrow
 	url = git://github.com/chriskempson/vim-tomorrow-theme.git
-[submodule "bundle/github-theme"]
-	path = bundle/github-theme
-	url = git://github.com/acarapetis/vim-github-theme.git
