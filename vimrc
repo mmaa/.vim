@@ -27,7 +27,7 @@ set list listchars=tab:▶\ ,trail:·    " a tab should display as "  ", trailin
 set backspace=indent,eol,start        " backspace through everything in insert mode
 let macvim_hig_shift_movement = 1     " mvim shift-arrow-keys (required in vimrc)
 
-set nohlsearch  " don't highlight matches
+" set nohlsearch  " don't highlight matches
 set incsearch   " incremental searching
 set ignorecase  " searches are case insensitive...
 set smartcase   " ... unless they contain at least one capital letter
