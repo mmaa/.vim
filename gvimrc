@@ -1,6 +1,6 @@
-set guifont=Menlo:h11
+set guifont=Menlo:h13
 colorscheme solarized
-set background=dark
+set background=light
 
 set guioptions-=T
 set guioptions-=r
