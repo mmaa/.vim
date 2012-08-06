@@ -18,6 +18,7 @@ set t_Co=256
 set background=light
 colorscheme solarized
 
+set colorcolumn=80
 set nowrap
 set tabstop=4                         " a hard tab is four spaces
 set softtabstop=2                     " a soft tab is two spaces
