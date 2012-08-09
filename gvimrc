@@ -10,6 +10,6 @@ set wrap
 
 if has("gui_macvim")
   macmenu &File.New\ Tab key=<nop>
-  map <D-t> <Plug>PeepOpen
-  imap <D-t> <Esc>:CommandT<CR>
+  " map <D-t> <Plug>PeepOpen
+  " imap <D-t> <Esc>:CommandT<CR>
 endif
