@@ -81,7 +81,7 @@ nnoremap k gk
 " Map <Leader><Leader> to ZoomWin
 map <Leader><Leader> :ZoomWin<CR>
 
-map <Leader>f :Ack<space>
+map <Leader>f :Ag<space>
 
 " Delete current buffer and go to previous
 command! BD :bprevious <bar> :bd#
