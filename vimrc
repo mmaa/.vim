@@ -18,7 +18,7 @@ set t_Co=256
 set background=light
 colorscheme solarized
 
-set nowrap
+set wrap
 set tabstop=4                         " a hard tab is four spaces
 set softtabstop=2                     " a soft tab is two spaces
 set shiftwidth=2                      " an autoindent (with <<) is two spaces
