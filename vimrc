@@ -43,6 +43,8 @@ set tags=./tags
 set wildmenu
 set laststatus=2  " always show the status bar
 let g:Powerline_symbols = 'fancy'
+call Pl#Theme#RemoveSegment('fileformat')
+call Pl#Theme#RemoveSegment('fileencoding')
 
 filetype plugin indent on " Turn on filetype plugins (:help filetype-plugin)
 
