@@ -42,7 +42,7 @@ set tags=./tags
 
 set wildmenu
 set laststatus=2  " always show the status bar
-set statusline=%n:\ %<%f\ %m\ %=%l/%L\ %P
+let g:Powerline_symbols = 'fancy'
 
 filetype plugin indent on " Turn on filetype plugins (:help filetype-plugin)
 
