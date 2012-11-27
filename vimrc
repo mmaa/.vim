@@ -56,8 +56,8 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=r
 
 " Treat JSON files like JavaScript
 au BufNewFile,BufRead *.json set ft=javascript
-
 au BufNewFile,BufRead *.pig set filetype=pig syntax=pig
+au BufNewFile,BufRead *.md set filetype=markdown syntax=markdown
 
 let mapleader = ","
 
