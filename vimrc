@@ -54,8 +54,6 @@ au FileType make set noexpandtab
 " Set the Ruby filetype for a number of common Ruby files without .rb
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
 
-" Treat JSON files like JavaScript
-au BufNewFile,BufRead *.json set ft=javascript
 au BufNewFile,BufRead *.pig set filetype=pig syntax=pig
 au BufNewFile,BufRead *.md set filetype=markdown syntax=markdown
 
