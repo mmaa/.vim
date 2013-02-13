@@ -31,9 +31,6 @@
 [submodule "bundle/pig"]
 	path = bundle/pig
 	url = git://github.com/vim-scripts/pig.vim.git
-[submodule "bundle/slim"]
-	path = bundle/slim
-	url = git://github.com/slim-template/vim-slim.git
 [submodule "bundle/ruby"]
 	path = bundle/ruby
 	url = git://github.com/vim-ruby/vim-ruby.git
@@ -46,3 +43,6 @@
 [submodule "bundle/ag"]
 	path = bundle/ag
 	url = git://github.com/epmatsw/ag.vim.git
+[submodule "bundle/slim"]
+	path = bundle/slim
+	url = git://github.com/slim-template/vim-slim.git

@@ -6,6 +6,7 @@ task :default do
     branch = dir == "bundle/powerline" ? 'develop' : 'master'
 
     FileUtils.cd(dir) do
+      puts dir
       `git pull origin #{branch}`
     end
   end
