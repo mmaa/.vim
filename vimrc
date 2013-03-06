@@ -8,50 +8,64 @@ set nowritebackup
 set noswapfile
 set hidden
 
-set nocompatible      " Use vim, no vi defaults
-set number            " Show line numbers
-set ruler             " Show line and column number
-syntax enable         " Turn on syntax highlighting allowing local overrides
-set encoding=utf-8    " Set default encoding to UTF-8
+set nocompatible      " use vim, no vi defaults
+set number            " show line numbers
+set ruler             " show line and column number
+set encoding=utf-8    " set default encoding to UTF-8
+set ffs=unix,dos,mac  " set unix as standard filetype
+set history=999
+
+syntax enable         " turn on syntax highlighting allowing local overrides
+filetype plugin on    " enable filetype plugins
+filetype indent on
+
+set ignorecase  " searches are case insensitive...
+set smartcase   " ...unless they contain at least one capital letter
+set hlsearch    " highlight search results
+set incsearch   " incremental searching
+set magic       " for regular expressions
+set lazyredraw  " don't redraw while executing macros
+set showmatch   " show matching brackets
+set mat=2       " tenths of a second to blink when matching brackets
+
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
 
 set t_Co=256
 set background=light
 colorscheme solarized
 
+set foldcolumn=1                      " extra space left of line numbers
+set so=7                              " space between cursor and top/bottom
 set wrap
+set autoindent
+set smartindent
 set tabstop=4                         " a hard tab is four spaces
 set softtabstop=2                     " a soft tab is two spaces
 set shiftwidth=2                      " an autoindent (with <<) is two spaces
 set expandtab                         " use spaces, not tabs
-set list listchars=tab:▶\ ,trail:·    " a tab should display as "  ", trailing whitespace as "·"
+set smarttab
+set list listchars=tab:▶\ ,trail:·    " characters for tabs and trailing whitespace
 set backspace=indent,eol,start        " backspace through everything in insert mode
-let macvim_hig_shift_movement = 1     " mvim shift-arrow-keys (required in vimrc)
+set whichwrap+=<,>,h,l
 
-set incsearch   " incremental searching
-set ignorecase  " searches are case insensitive...
-set smartcase   " ... unless they contain at least one capital letter
-
-autocmd BufWritePost .vimrc source $MYVIMRC
-
-set completeopt=menu,preview,longest
-
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/bin/*
+set completeopt=menu,preview,longest  " show menu for completions
 
 set tags=./tags
 
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/bin/*
 set wildmenu
-set laststatus=2  " always show the status bar
-set statusline=%n:\ %<%f\ %m\ %=%v\ %l/%L\ %P
 
-filetype plugin indent on " Turn on filetype plugins (:help filetype-plugin)
+set laststatus=2  " always show the status bar
+set statusline=\ %{HasPaste()}%n:\ %<%f\ %m\ %=%v\ %l/%L\ %P
 
 " In Makefiles, use real tabs, not tabs expanded to spaces
 au FileType make set noexpandtab
 
 " Set the Ruby filetype for a number of common Ruby files without .rb
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
-
-au BufNewFile,BufRead *.pig set filetype=pig syntax=pig
 au BufNewFile,BufRead *.md set filetype=markdown syntax=markdown
 
 let mapleader = ","
@@ -73,6 +87,8 @@ map <Up> gk
 nnoremap j gj
 nnoremap k gk
 
+" Toggle paste mode on and off
+map <leader>p :setlocal paste!<cr>
 
 " Map <Leader><Leader> to ZoomWin
 map <Leader><Leader> :ZoomWin<CR>
@@ -102,3 +118,32 @@ command! TW %s/\s\+$//g
 
 " Convert Ruby hash syntax
 command! RH %s/([^\w^:]):([\w\d_]+)\s*=>/\1\2:/g
+
+" Returns true if paste mode is enabled
+function! HasPaste()
+  if &paste
+    return 'PASTE MODE  '
+  en
+  return ''
+endfunction
+
+" Don't close window, when deleting a buffer
+command! Bclose call <SID>BufcloseCloseIt()
+function! <SID>BufcloseCloseIt()
+  let l:currentBufNum = bufnr("%")
+  let l:alternateBufNum = bufnr("#")
+
+  if buflisted(l:alternateBufNum)
+    buffer #
+  else
+    bnext
+  endif
+
+  if bufnr("%") == l:currentBufNum
+    new
+  endif
+
+  if buflisted(l:currentBufNum)
+    execute("bdelete! ".l:currentBufNum)
+  endif
+endfunction
