@@ -37,7 +37,7 @@ set t_Co=256
 set background=light
 colorscheme solarized
 
-set foldcolumn=1                      " extra space left of line numbers
+set foldcolumn=0                      " extra space left of line numbers
 set so=7                              " space between cursor and top/bottom
 set wrap
 set autoindent
@@ -73,7 +73,7 @@ let mapleader = ","
 let g:ctrlp_map = '<Leader>t'
 let g:ctrlp_cmd = 'CtrlP'
 
-noremap <Leader>h :set hlsearch! hlsearch?<CR>
+noremap <Leader><space> :set hlsearch! hlsearch?<CR>
 
 nmap <silent> <C-n> :cn<cr>
 nmap <silent> <C-p> :cp<cr>
@@ -88,7 +88,7 @@ nnoremap j gj
 nnoremap k gk
 
 " Toggle paste mode on and off
-map <leader>p :setlocal paste!<cr>
+map <leader>pp :setlocal paste!<cr>
 
 " Map <Leader><Leader> to ZoomWin
 map <Leader><Leader> :ZoomWin<CR>
@@ -102,9 +102,6 @@ command! BDA :bufdo bd
 " Tab through buffers
 nnoremap <Tab> :bnext<cr>
 nnoremap <S-Tab> :bprevious<cr>
-
-" Clear search
-nnoremap <leader><space> :noh<cr>
 
 " NERDTree configuration
 let NERDTreeIgnore=['^tags$', '\.lock$', '\.out$', '\.pyc$', '\.rbc$', '\~$']
