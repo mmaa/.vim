@@ -37,6 +37,7 @@ set t_Co=256
 set background=light
 colorscheme solarized
 
+set nofoldenable
 set foldcolumn=0                      " extra space left of line numbers
 set so=7                              " space between cursor and top/bottom
 set wrap
