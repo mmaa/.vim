@@ -6,7 +6,7 @@ set autoread
 set nobackup
 set nowritebackup
 set noswapfile
-set hidden
+" set hidden
 
 set nocompatible      " use vim, no vi defaults
 set number            " show line numbers
@@ -111,8 +111,19 @@ map <Leader>n :NERDTreeToggle<CR>
 
 let NERDSpaceDelims=1
 
-" Trim trailing whitespace on command
-command! TW %s/\s\+$//g
+" Trim trailing whitespace
+function! <SID>StripTrailingWhitespaces()
+  " Preparation: save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
+  %s/\s\+$//e
+  " Clean up: restore previous search history, and cursor position
+  let @/=_s
+  call cursor(l, c)
+endfunction
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 " Convert Ruby hash syntax
 command! RH %s/([^\w^:]):([\w\d_]+)\s*=>/\1\2:/g

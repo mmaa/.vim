@@ -1,5 +1,5 @@
 runtime bundle/pathogen/autoload/pathogen.vim
-call pathogen#infect('vimpager')
+call pathogen#infect('vimpager/{}')
 
 set t_Co=256
 set background=light
