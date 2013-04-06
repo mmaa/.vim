@@ -6,7 +6,7 @@ set autoread
 set nobackup
 set nowritebackup
 set noswapfile
-" set hidden
+set hidden
 
 set nocompatible      " use vim, no vi defaults
 set number            " show line numbers
@@ -60,7 +60,7 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/bin/*
 set wildmenu
 
 set laststatus=2  " always show the status bar
-set statusline=\ %{HasPaste()}%n:\ %<%f\ %m\ %=%v\ %l/%L\ %P
+set statusline=\ %{HasPaste()}%n:\ %<%f\ %m\ %=%v\:%l/%L\ %P
 
 " In Makefiles, use real tabs, not tabs expanded to spaces
 au FileType make set noexpandtab
@@ -72,7 +72,7 @@ au BufNewFile,BufRead *.md set filetype=markdown syntax=markdown
 let mapleader = ","
 
 let g:ctrlp_map = '<Leader>t'
-let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_cmd = 'CtrlPMixed'
 
 noremap <Leader><space> :set hlsearch! hlsearch?<CR>
 
