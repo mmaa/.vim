@@ -36,6 +36,7 @@ set tm=500
 set t_Co=256
 set background=light
 colorscheme solarized
+set cursorline
 
 set nofoldenable
 set foldcolumn=0                      " extra space left of line numbers
@@ -60,7 +61,7 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/bin/*
 set wildmenu
 
 set laststatus=2  " always show the status bar
-set statusline=\ %{HasPaste()}%n:\ %<%f\ %m\ %=%v\:%l/%L\ %P
+set statusline=\ %{HasPaste()}%n:\ %<%f\ %y\ %m\ %=%v\:%l/%L\ %P
 
 " In Makefiles, use real tabs, not tabs expanded to spaces
 au FileType make set noexpandtab
@@ -68,6 +69,17 @@ au FileType make set noexpandtab
 " Set the Ruby filetype for a number of common Ruby files without .rb
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
 au BufNewFile,BufRead *.md set filetype=markdown syntax=markdown
+
+nmap <CR> :write!<CR>
+
+" Smart way to move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+map <C-v> <C-W>v
+map <C-s> <C-W>s
+map <C-c> <C-W>c
 
 let mapleader = ","
 
@@ -94,11 +106,11 @@ map <leader>pp :setlocal paste!<cr>
 " Map <Leader><Leader> to ZoomWin
 map <Leader><Leader> :ZoomWin<CR>
 
-map <Leader>f :Ag<space>
+map <Leader>f :Ack<space>
 
 " Delete current buffer and go to previous
-command! BD :bprevious <bar> :bd#
-command! BDA :bufdo bd
+nnoremap <Leader>d :bprevious <bar> :bd#<CR>
+nnoremap <Leader>a :bufdo bd<CR>
 
 " Tab through buffers
 nnoremap <Tab> :bnext<cr>
