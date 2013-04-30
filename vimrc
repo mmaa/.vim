@@ -57,7 +57,7 @@ set completeopt=menu,preview,longest  " show menu for completions
 
 set tags=./tags
 
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/bin/*
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/bin/*,*/tmp/*,*spec/artifacts/*
 set wildmenu
 
 set laststatus=2  " always show the status bar

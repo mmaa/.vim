@@ -1,4 +1,4 @@
-set guifont=Menlo:h13
+set guifont=Menlo:h11
 colorscheme solarized
 set background=light
 set linespace=3
