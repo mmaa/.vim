@@ -70,7 +70,7 @@ au FileType make set noexpandtab
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
 au BufNewFile,BufRead *.md set filetype=markdown syntax=markdown
 
-nmap <CR> :write!<CR>
+nmap <C-CR> :write!<CR>
 
 " Smart way to move between windows
 map <C-j> <C-W>j
