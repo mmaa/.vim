@@ -120,6 +120,7 @@ nnoremap <S-Tab> :bprevious<cr>
 let NERDTreeIgnore=['^tags$', '\.lock$', '\.out$', '\.pyc$', '\.rbc$', '\~$']
 let NERDTreeDirArrows=1
 map <Leader>n :NERDTreeToggle<CR>
+command! NF :NERDTreeFind
 
 let NERDSpaceDelims=1
 
