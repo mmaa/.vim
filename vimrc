@@ -2,6 +2,10 @@ runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
 
+if &shell =~# 'fish$'
+  set shell=sh
+endif
+
 set autoread
 set nobackup
 set nowritebackup
