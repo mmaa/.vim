@@ -56,7 +56,9 @@ set list listchars=tab:▶\ ,trail:·    " characters for tabs and trailing whit
 set backspace=indent,eol,start        " backspace through everything in insert mode
 set whichwrap+=<,>,h,l
 
-set completeopt=menu,preview,longest  " show menu for completions
+set completeopt=longest,menuone,preview  " show menu for completions
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<C-CR>"
+inoremap <expr> <C-n> pumvisible() ? '<C-n>' : '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
 set tags=./tags
 
@@ -110,6 +112,7 @@ map <leader>pp :setlocal paste!<cr>
 map <Leader><Leader> :ZoomWin<CR>
 
 map <Leader>f :Ag<space>
+map <Leader>b :Gblame<CR>
 
 " Delete current buffer and go to previous
 nnoremap <Leader>d :bprevious <bar> :bd#<CR>
