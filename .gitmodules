@@ -49,8 +49,6 @@
 [submodule "snippets/scrooloose"]
 	path = snippets/scrooloose
 	url = git://github.com/scrooloose/snipmate-snippets.git
-[submodule "bundle/tomorrow"]
-	path = bundle/tomorrow
 	url = git://github.com/13k/vim-tomorrow.git
 [submodule "bundle/autoclose"]
 	path = bundle/autoclose
