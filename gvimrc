@@ -1,6 +1,6 @@
-set guifont=Meslo\ LG\ M\ for\ Powerline:h13
+set guifont=Consolas:h14
 colorscheme solarized
-set background=dark
+set linespace=2
 
 set guioptions-=r
 set guioptions-=L
