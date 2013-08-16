@@ -1,7 +1,7 @@
-set guifont=Menlo:h13
+set guifont=Consolas:h14
 colorscheme solarized
-set background=light
-set linespace=3
+set background=dark
+set linespace=2
 
 set guioptions-=r
 set guioptions-=L

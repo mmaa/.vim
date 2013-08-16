@@ -68,12 +68,18 @@ set wildmenu
 set laststatus=2  " always show the status bar
 set statusline=\ %{HasPaste()}%n:\ %<%f\ %y\ %m\ %=%v\:%l/%L\ %P
 
+" Airline
+let g:airline_theme='solarized'
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+
 " In Makefiles, use real tabs, not tabs expanded to spaces
 au FileType make set noexpandtab
 
 " Set the Ruby filetype for a number of common Ruby files without .rb
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
+au BufNewFile,BufRead {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
 au BufNewFile,BufRead *.md set filetype=markdown syntax=markdown
+au BufNewFile,BufRead *.slim set filetype=slim syntax=slim
 
 nmap <C-CR> :write!<CR>
 
