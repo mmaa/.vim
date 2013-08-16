@@ -69,9 +69,8 @@ set laststatus=2  " always show the status bar
 set statusline=\ %{HasPaste()}%n:\ %<%f\ %y\ %m\ %=%v\:%l/%L\ %P
 
 " Airline
+let g:airline_powerline_fonts=1
 let g:airline_theme='solarized'
-let g:airline_left_sep=''
-let g:airline_right_sep=''
 
 " In Makefiles, use real tabs, not tabs expanded to spaces
 au FileType make set noexpandtab
