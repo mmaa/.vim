@@ -72,6 +72,7 @@ set statusline=\ %{HasPaste()}%n:\ %<%f\ %y\ %m\ %=%v\:%l/%L\ %P
 let g:airline_theme='solarized'
 let g:airline_left_sep=''
 let g:airline_right_sep=''
+let g:airline_detect_whitespace=0
 
 " In Makefiles, use real tabs, not tabs expanded to spaces
 au FileType make set noexpandtab
