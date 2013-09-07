@@ -39,7 +39,7 @@ set tm=500
 
 set t_Co=256
 colorscheme solarized
-set background=dark
+set background=light
 
 set nofoldenable
 set foldcolumn=0                      " extra space left of line numbers
