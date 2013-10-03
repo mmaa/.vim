@@ -1,12 +1,8 @@
 set guifont=Menlo:h13
-colorscheme solarized
-set background=light
 set linespace=2
 
 set guioptions-=r
 set guioptions-=L
-
-set wrap
 
 if has("gui_macvim")
   macmenu &File.New\ Tab key=<nop>
