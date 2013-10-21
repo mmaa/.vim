@@ -43,7 +43,7 @@ set background=light
 
 set nofoldenable
 set foldcolumn=0                      " extra space left of line numbers
-set so=7                              " space between cursor and top/bottom
+set scrolloff=3                       " space between cursor and top/bottom
 set wrap
 set autoindent
 set smartindent
