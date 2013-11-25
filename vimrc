@@ -91,9 +91,6 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
-map <C-v> <C-W>v
-map <C-s> <C-W>s
-map <C-c> <C-W>c
 
 let mapleader = ","
 
