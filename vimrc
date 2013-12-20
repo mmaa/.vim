@@ -69,7 +69,6 @@ set laststatus=2  " always show the status bar
 set statusline=\ %{HasPaste()}%n:\ %<%f\ %y\ %m\ %=%v\:%l/%L\ %P
 
 " Airline
-let g:airline_theme='solarized'
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline_detect_modified=1
