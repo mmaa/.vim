@@ -62,3 +62,6 @@
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = git@github.com:tpope/vim-surround.git
+[submodule "bundle/elixir"]
+	path = bundle/elixir
+	url = git@github.com:elixir-lang/vim-elixir.git
