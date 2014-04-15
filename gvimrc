@@ -1,4 +1,4 @@
-set guifont=Menlo:h13
+set guifont=Menlo:h11
 set linespace=2
 
 set guioptions-=r

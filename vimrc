@@ -94,7 +94,6 @@ map <C-l> <C-W>l
 let mapleader = ","
 
 let g:ctrlp_map = '<Leader>t'
-let g:ctrlp_cmd = 'CtrlPMixed'
 
 noremap <Leader><space> :set hlsearch! hlsearch?<CR>
 
