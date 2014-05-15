@@ -93,15 +93,10 @@ map <C-l> <C-W>l
 
 let mapleader = ","
 
-let g:ctrlp_map = '<Leader>t'
-
 noremap <Leader><space> :set hlsearch! hlsearch?<CR>
 
 nmap <silent> <C-n> :cn<cr>
 nmap <silent> <C-p> :cp<cr>
-
-" Opens the directory browser for the directory of the current path.
-map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
 " Map the arrow keys to be based on display lines, not physical lines
 map <Down> gj
@@ -148,34 +143,10 @@ function! <SID>StripTrailingWhitespaces()
 endfunction
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
-" Convert Ruby hash syntax
-command! RH %s/([^\w^:]):([\w\d_]+)\s*=>/\1\2:/g
-
 " Returns true if paste mode is enabled
 function! HasPaste()
   if &paste
     return 'PASTE MODE  '
   en
   return ''
-endfunction
-
-" Don't close window, when deleting a buffer
-command! Bclose call <SID>BufcloseCloseIt()
-function! <SID>BufcloseCloseIt()
-  let l:currentBufNum = bufnr("%")
-  let l:alternateBufNum = bufnr("#")
-
-  if buflisted(l:alternateBufNum)
-    buffer #
-  else
-    bnext
-  endif
-
-  if bufnr("%") == l:currentBufNum
-    new
-  endif
-
-  if buflisted(l:currentBufNum)
-    execute("bdelete! ".l:currentBufNum)
-  endif
 endfunction
