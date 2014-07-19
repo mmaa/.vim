@@ -7,5 +7,3 @@ colorscheme solarized
 
 set so=7
 set wrap
-set laststatus=2
-set statusline=\ %<%f\ %m\ %=%v\ %l/%L\ %P
